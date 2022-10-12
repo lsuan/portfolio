@@ -69,7 +69,7 @@ function Contact() {
           <div className="contact-form p-3 card col-12 col-md-6">
             <form id="contact-form" name="contact" className="d-flex d-flex flex-column justify-content-between" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} action="/success">
               <input name="bot-field" className="d-none" />
-              <input type="hidden" name="contact" value="contact" />
+              <input type="hidden" name="form-name" value="contact" />
               <div className="inputs">
                 <div className="form-floating mb-3">
                   <input type="text" name="name" className="form-control" id="name" placeholder="First Last" required={true} onChange={handleChange}/>
