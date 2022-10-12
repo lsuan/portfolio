@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ThemeContext, themes } from '../contexts/ThemeContext';
+import { ThemeContext, themes } from '../Contexts/ThemeContext';
  
 function ModeIcon() {
   const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
