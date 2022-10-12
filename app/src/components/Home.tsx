@@ -3,10 +3,7 @@ import Profile from './Profile';
 import "../styles/home.scss";
  
 function Home() {
-  // useEffect( () => {
-  //   const tooltipTriggerList = document.querySelectorAll('.initial-screen [data-bs-toggle="tooltip"]');
-  //   const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
-  // }, []);
+  
     return (
     <div className="container-xxl">
       <div className="initial-screen d-flex flex-column justify-content-center align-items-center" id="home">

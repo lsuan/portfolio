@@ -343,7 +343,8 @@
   }
   .custom-tooltip {
     // border: 2px var(--light-mode-beige);
-    --bs-tooltip-bg: var(--light-mode-beige);
+    --bs-tooltip-bg: var(--light-mode-pink);
+    --bs-tooltip-color: var(--light-mode-background);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
@@ -681,7 +682,8 @@
   }
   .custom-tooltip {
     // border: 2px var(--dark-mode-beige);
-    --bs-tooltip-bg: var(--dark-mode-beige);
+    --bs-tooltip-bg: var(--dark-mode-pink);
+    --bs-tooltip-color: var(--dark-mode-background);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.15rem;

@@ -28,7 +28,7 @@ function Projects() {
       imageUrl: require("../assets/hagglit-thumbnail.png"),
       position: "", time: "Sep 2022 — Present",
       description: "This is a private Discord bot that I made for my server of close KPOP fandom friends. I had to learn how to create a Discord application and use Discord API to create custom commands. \
-        Furthermore, I used Google Sheets API to store and manipulate information to a Google Sheet that acted like a relational database, and Twitter API to return tweet metrics.",
+        Furthermore, I used Google Sheets API to store and manipulate information to a spreadsheet that acted like a relational database, and Twitter API to return tweet metrics.",
       tech: ["Python", "APIs"],
     }
   ];

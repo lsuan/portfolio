@@ -3,10 +3,6 @@ import "../styles/contact.scss";
 import PrevPage from './PrevPage';
  
 function Contact() {
-  // useEffect( () => {
-  //   const tooltipTriggerList = document.querySelectorAll('#contact [data-bs-toggle="tooltip"]');
-  //   const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
-  // }, []);
   
   return (
     <div className="container-xxl">

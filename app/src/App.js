@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 import Nav from './components/Nav';
@@ -11,6 +11,11 @@ import Profile from './components/Profile';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
+  useEffect( () => {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
+  });
+
   return (
     <Router>
       <ScrollToTop />
