@@ -1,0 +1,81 @@
+ 
+ 
+#contact {
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  @media screen and (max-width: 576px) {
+    .content {
+      .contact-text {
+        font-size: 20px !important;
+      }
+      .or-text {
+        font-size: 26px !important;
+      }
+      .contact-form {
+        .form-floating {
+          .form-control, label {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    text-align: start;
+  }
+  .hire-me {
+    font-size: 30px;
+  }
+  .content {
+    max-width: 1000px;
+   
+    .contact-text {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 0.15rem;
+      .contact-icons {
+        width: 150px;
+        a {
+          &:hover {
+            transform: scale(1.2);
+            transition: transform 200ms ease;
+          }
+          i {
+            font-size: 50px;
+          }
+        }
+      }
+      .or-text {
+        font-size: 30px;
+      }
+      .form-ref {
+        // font-size: 30px;
+        .bi-arrow-right {
+          font-size: 80px;
+          animation: bounce-right 1500ms infinite;
+        }
+        .bi-arrow-down {
+          font-size: 60px;
+          animation: bounce-down 1500ms infinite;
+        }
+      }
+    }
+    .contact-form {
+      height: 400px;
+      form {
+        height: 100%;
+        label, button {
+          font-size: 16px;
+          letter-spacing: 0.15rem;
+          font-weight: bold;
+        }
+        textarea {
+          min-height: 4rem;
+          height: 10rem;
+          max-height: 10rem;
+        }
+      }
+    }
+  }
+} 

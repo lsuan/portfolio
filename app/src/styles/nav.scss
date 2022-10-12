@@ -1,0 +1,44 @@
+#nav {
+  border-radius: 0;
+  .logo-container {
+    border: 2px solid transparent;
+    border-radius: 100%;
+  }
+  .nav-item {
+    .nav-link {
+      border-radius: 0.5rem;
+      letter-spacing: 0.25rem;
+      font-weight: bold;
+    }
+    .mode-icon {
+      margin-top: 0.2rem;
+    }
+  }
+  
+  button {
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    svg:hover {
+      width: 70%;
+      transition: 200ms ease;
+    }
+  }
+  .dropdown-toggle {
+    font-size: 30px;
+    line-height: 30px;
+    &:hover {
+      font-size: 36px;
+      transition: 200ms ease;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    border: 2px solid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+}
+ 
+ 

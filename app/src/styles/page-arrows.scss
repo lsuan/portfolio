@@ -1,0 +1,58 @@
+@media screen and (max-width: 767px) {
+  .arrows {
+    bottom: 2rem !important;
+    .prev-page, .next-page {
+      a {
+        font-size: 16px !important;
+        i {
+          font-size: 20px !important;
+        }
+      }
+      .stop-bar {
+        width: 14px !important;
+      }
+    }
+  }
+}
+  
+.arrows {
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+  right: 5%;
+  .prev-page, .next-page {
+    a {
+      background-color: transparent;
+      border: none;
+      padding-right: 0;
+      animation-timing-function: cubic-bezier(.31,.52,.64,.68);
+      button {
+        width: auto;
+  
+      }
+      i {
+        font-size: 30px;
+        margin-right: 5px;
+      }
+    }
+    .stop-bar {
+      // position: absolute;
+      // bottom: 8%;
+      // right: 2%;
+      rotate: 90deg;
+      border-width: 5px;
+      border-radius: 0.5rem;
+      height: 2px;
+      width: 18px;
+      opacity: 100%;
+    }
+  }
+  .prev-page a {
+    animation: bounce-left 1500ms infinite;
+  }
+  .next-page a {
+    animation: bounce-right 1500ms infinite;
+  }
+}
+ 
+ 

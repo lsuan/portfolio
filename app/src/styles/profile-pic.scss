@@ -1,0 +1,59 @@
+@keyframes exp-load {
+  0% {
+    stroke-dashoffset: 660;
+  }
+ }
+  
+.pfp-container {
+  flex: 1;
+  .img-container {
+    position: relative;
+    width: 224px;
+    height: 224px;
+    border: 2px solid;
+    border-radius: 100%;
+  
+    .level {
+      position: absolute;
+      top: -20px;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      border: 2px solid;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        font-weight: bold;
+      }
+    }
+   
+    .exp-container {
+      circle {
+        fill: none;
+        stroke: url(#gradient-color);
+        stroke-width: 10px;
+        stroke-dasharray: 660;
+        animation: exp-load 2s ease;
+      }
+    }
+    .pfp {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 2px solid;
+      border-radius: 100%;
+    }
+  }
+  
+  .next-level p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+ 
+ 
