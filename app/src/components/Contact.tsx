@@ -18,6 +18,7 @@ function Contact() {
   }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    console.log(event.target);
     console.log(encode({ "form-name": "contact", ...state }));
     fetch("/", {
       method: "POST",
@@ -30,6 +31,7 @@ function Contact() {
   }
   
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+    console.log(state);
     setState({
       ...state,
       [e.currentTarget.name]: e.currentTarget.value,
@@ -77,7 +79,7 @@ function Contact() {
                 <label htmlFor="email">EMAIL</label>
               </div>
               <div className="form-floating mb-2">
-                <textarea id="message" name="message" className="form-control w-100" rows={5} placeholder="Leave a message." required={true} onChange={()=>handleChange}/>
+                <textarea id="message" name="message" className="form-control w-100" rows={5} placeholder="Leave a message." required={true} onChange={(e) => handleChange(e)}/>
                 <label htmlFor="message">MESSAGE</label>
               </div>
             </div>
