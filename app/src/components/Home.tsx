@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Profile from './Profile';
 import "../styles/home.scss";
  
 function Home() {
-  
+
     return (
     <div className="container-xxl">
       <div className="initial-screen d-flex flex-column justify-content-center align-items-center" id="home">

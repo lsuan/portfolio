@@ -1,20 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../styles/modal-contents.scss";
  
 function HagglitModalContents() {
-  const slide1Ref = useRef(null);
-  const slide2Ref = useRef(null);
-  const slide3Ref = useRef(null);
-  const indicatorsRef = useRef(null);
-  
-  // fix for when height changes on next slide
-  // function handleIndicatorPosition() {
-  //   const windowHeight = window.outerHeight;
-  //   const modalHeight = document.querySelector("#hagglit-modal .modal-content").clientHeight;
-  //   const top = (windowHeight / 2) + (modalHeight / 2);
-  //   indicatorsRef.current.style.top = top + "px";
-  //   console.log("hi");
-  // }
   
   return (
     <div id="hagglitCarousel" className="carousel slide carousel-fade d-flex align-items-center w-100">

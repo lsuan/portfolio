@@ -12,10 +12,10 @@ import ScrollToTop from './components/ScrollToTop';
 import Success from './components/Success';
 
 function App() {
-  useEffect( () => {
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const _tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
-  });
+  // useEffect( () => {
+  //   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  //   const _tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
+  // });
 
   return (
     <Router>

@@ -1,6 +1,4 @@
-import React from 'react';
-import { NonIndexRouteObject } from 'react-router';
- 
+import React from 'react'; 
  
 // type Skill = {
 //   name: string,
