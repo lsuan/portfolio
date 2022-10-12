@@ -79,7 +79,7 @@ function Contact() {
                 <label htmlFor="email">EMAIL</label>
               </div>
               <div className="form-floating mb-2">
-                <textarea id="message" name="message" className="form-control w-100" rows={5} placeholder="Leave a message." required={true} onChange={(e) => handleChange(e)}/>
+                <textarea id="message" name="message" className="form-control w-100" placeholder="Leave a message." required={true} onChange={handleChange}/>
                 <label htmlFor="message">MESSAGE</label>
               </div>
             </div>
