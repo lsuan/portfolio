@@ -5,7 +5,7 @@ import UCISVG from "./UCISVG";
  
 function Bio() {
   const likes = [
-    "great + fun company",
+    "fun company",
     "helpful teammates",
     "dancing",
     "producing great results",

@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/projects.scss";
-import NextPage from './NextPage';
+// import NextPage from './NextPage';
 import PrevPage from './PrevPage';
 import ProjectModal from './ProjectModal';
  
@@ -128,7 +128,7 @@ function Projects() {
         </div>
         <div className="arrows d-flex justify-content-between align-items-center mt-3">
           <PrevPage {...{name: "TO HOME"}} />
-          <NextPage {...{name: "HIRE ME"}} />
+          {/* <NextPage {...{name: "HIRE ME"}} /> */}
         </div>
       </div>
     </div>

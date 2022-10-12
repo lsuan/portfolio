@@ -26,7 +26,6 @@ function ProfilePic() {
   }
 
   const currentTheme = useContext(ThemeContext);
-  console.log(currentTheme);
   useEffect( () => {
     calculateExp();
   }, []);

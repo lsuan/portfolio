@@ -1,3 +1,5 @@
+@import "../src/styles/contact.scss";
+
 body {
   margin: 0;
   font-family: 'Ubuntu';
