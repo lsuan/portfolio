@@ -55,13 +55,13 @@ function ProfilePic() {
                       <stop offset="100%" stopColor="#f5347f" />
                     </linearGradient>
                   )
-
                 }
               </defs>
               <circle ref={expCircleRef} cx="110" cy="110" r="105" strokeLinecap="round" />
             </svg>
           </div>
           <div className="pfp">
+            <img src={require("../assets/selfie.png")} alt="Lee Suan Selfie" loading="lazy" />
           </div>
         </div>
         <div className="next-level my-3">
