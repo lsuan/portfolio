@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import * as bootstrap from 'bootstrap';
+import * as bootstrap from 'bootstrap';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import ScrollToTop from './components/ScrollToTop';

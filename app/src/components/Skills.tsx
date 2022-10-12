@@ -1,4 +1,5 @@
 import React from 'react';
+import { NonIndexRouteObject } from 'react-router';
  
  
 // type Skill = {
@@ -9,7 +10,7 @@ import React from 'react';
  
 function Skills() {
  
-  const handleStrokeDashoffset = (value) => {
+  const handleStrokeDashoffset = (value: number) => {
     const percentage = value / 100;
     const offsetValue = Math.round(578 * percentage);
     return 578 - offsetValue;
