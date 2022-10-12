@@ -14,14 +14,14 @@ function Profile() {
     if (hash === "#profile") {
       profileRef.current.scrollIntoView({behavior: "auto"});
     }
-  }, []);
+  });
   
   return (
     <div ref={profileRef} id="profile" className="py-5 px-3 px-sm-5 mb-md-0">
       <h1 className="mb-3 mt-5 my-sm-5">PROFILE</h1>
       <div className="content d-flex justify-content-center align-items-center m-auto flex-md-row flex-column mb-5">
         <ProfilePic />
-        <div className="col card p-md-3 ms-md-3 ms-lg-4 mb-md-0 w-100">
+        <div className="col card p-md-3 ms-md-3 ms-lg-4 mb-4 mb-md-0 w-100">
           <ul className="nav nav-tabs d-flex" id="profile-tabs" role="tablist">
             <li className="nav-item me-2">
               <button className="nav-link active me-2 mb-2 mb-sm-0 d-flex justify-content-center" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-tab-pane" type="button" role="tab" aria-controls="skills-tab-pane" aria-selected="true">

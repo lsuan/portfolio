@@ -9,11 +9,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import ScrollToTop from './components/ScrollToTop';
+import Success from './components/Success';
 
 function App() {
   useEffect( () => {
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
+    const _tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new window.bootstrap.Tooltip(tooltipTriggerEl))
   });
 
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/#profile" exact element={<Profile />} />
         <Route path="/projects" exact element={<Projects />} />
         <Route path="/contact" exact element={<Contact />} />
+        <Route path="/success" exact element={<Success />} />
       </Routes>
     </Router>
   )
