@@ -1,10 +1,41 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import "../styles/contact.scss";
 import PrevPage from './PrevPage';
 // import Confirmation from './Success';
  
 function Contact() {
+  interface FormPost {
+    firstname?: string,
+    lastname?: string,
+    message?: string
+  }
+
   const modalTriggerRef = useRef(null);
+  const [state, setState] = useState<FormPost>();
+
+  const encode = (data: any) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...state })
+    })
+      .then(() => console.log("Success!"))
+      .catch(error => console.log(error));
+    event.preventDefault();
+  }
+  
+  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setState({
+      ...state,
+      [e.currentTarget.id]: e.currentTarget.value,
+    });
+  };
 
   return (
     <div className="container-xxl">
@@ -36,25 +67,26 @@ function Contact() {
             </div>
           </div>
           <div className="contact-form p-3 card col-12 col-md-6">
-            <form id="contact-form" name="contact" className="d-flex d-flex flex-column justify-content-between" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit" action="/success">
+            <form id="contact-form" name="contact" className="d-flex d-flex flex-column justify-content-between" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} action="/success">
               <input name="bot-field" className="d-none" />
+              <input type="hidden" name="contact" value="contact" />
               <div className="inputs">
                 <div className="form-floating mb-3">
-                  <input type="text" name="name" className="form-control" id="name" placeholder="First Last" required={true}/>
+                  <input type="text" name="name" className="form-control" id="name" placeholder="First Last" required={true} onChange={handleChange}/>
                   <label htmlFor="name">NAME</label>
                 <div className="invalid-feedback">
                   Don't forget to include your name!
                 </div>
               </div>
                 <div className="form-floating mb-3">
-                  <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required={true}/>
+                  <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required={true} onChange={handleChange}/>
                   <label htmlFor="email">EMAIL</label>
                 </div>
                 <div className="invalid-feedback">
                   Please fill out a valid email (example@email.com)
                 </div>
                 <div className="form-floating mb-2">
-                  <textarea id="message" name="message" className="form-control w-100" rows={5} placeholder="Leave a message." required={true}/>
+                  <textarea id="message" name="message" className="form-control w-100" rows={5} placeholder="Leave a message." required={true} onChange={()=>handleChange}/>
                   <label htmlFor="message">MESSAGE</label>
                 </div>
                 <div className="invalid-feedback">
