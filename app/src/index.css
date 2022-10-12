@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Ubuntu';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,56 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  border-radius: 0.5rem;
+}
+
+:root {
+  --dark-mode-beige: #DFD9CA;
+  --dark-mode-pink: #FCB9B4;
+  --dark-mode-green: #95c291;
+  --dark-mode-background: #222222;
+  --dark-mode-card-background: #333333;
+  --dark-mode-font-color: #FFFAF1;
+
+  --light-mode-beige: #8C573A;
+  --light-mode-pink: #CE6A85;
+  --light-mode-green: #606C38;
+  --light-mode-background: #F9F7F0;
+  --light-mode-card-background:#FBFAF6;
+  --light-mode-font-color: #222222;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    width: 100%;
+    margin: 0.5rem auto;
+  }
+}
+
+p {
+  font-size: 20px;
+}
+
+.navigation {
+  border-radius: 0;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  background: url("assets/personal-logo-transparent.png") no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+}
+
+.fade {
+  transition: opacity 400ms ease-out; 
 }
