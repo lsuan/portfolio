@@ -3,13 +3,13 @@ import './App.css';
 
 import Nav from './components/Nav';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+// import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import * as bootstrap from 'bootstrap';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import ScrollToTop from './components/ScrollToTop';
-import Success from './components/Success';
+// import Success from './components/Success';
 
 function App() {
   // useEffect( () => {
@@ -25,8 +25,8 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/#profile" exact element={<Profile />} />
         <Route path="/projects" exact element={<Projects />} />
-        <Route path="/contact" exact element={<Contact />} />
-        <Route path="/success" exact element={<Success />} />
+        {/* <Route path="/contact" exact element={<Contact />} />
+        <Route path="/success" exact element={<Success />} /> */}
       </Routes>
     </Router>
   )

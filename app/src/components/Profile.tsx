@@ -14,7 +14,7 @@ function Profile() {
     if (hash === "#profile") {
       profileRef.current.scrollIntoView({behavior: "auto"});
     }
-  });
+  }, [hash]);
   
   return (
     <div ref={profileRef} id="profile" className="py-5 px-3 px-sm-5 mb-md-0">
@@ -51,6 +51,13 @@ function Profile() {
         </div>
       </div>
       <div className="arrows">
+        <div className="down-section d-flex justify-content-center">
+          <a className="continue d-flex flex-column align-items-center" href="#contact-section">
+            HIRE ME
+            <i className="fa-solid fa-caret-down"></i>
+          </a>
+          <hr className="stop-bar"></hr>
+        </div>
         <div className="next-page d-flex justify-content-end align-items-center mt-3">
           <Link to="/projects" className="btn d-flex justify-content-end align-items-center">
             TO PROJECTS
@@ -59,7 +66,7 @@ function Profile() {
           <hr className="stop-bar"></hr>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
  

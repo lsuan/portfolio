@@ -5,11 +5,20 @@ import ModeIcon from './ModeIcon';
  
  
 function Nav() {
+
   const handleProfileClick = () => {
     const onHomePage = window.location.pathname === "/";
     if (onHomePage) {
       const profile = document.getElementById("profile");
       profile.scrollIntoView({behavior: "smooth"});
+    }
+  }
+
+  const handleContactClick = () => {
+    const onHomePage = window.location.pathname === "/";
+    if (onHomePage) {
+      const contactSection = document.getElementById("contact-section");
+      contactSection.scrollIntoView({behavior: "smooth"});
     }
   }
   
@@ -30,13 +39,13 @@ function Nav() {
           <Link to="/" onClick={handleHomeClick} className="nav-link">HOME</Link>
         </li>
         <li className="nav-item me-2">
-          <Link to={{pathname:"/", hash:"#profile"}} onClick={handleProfileClick} className="nav-link">PROFILE</Link>
+          <Link to={{pathname:"/", hash:"profile"}} onClick={handleProfileClick} className="nav-link">PROFILE</Link>
         </li>
         <li className="nav-item me-2">
           <Link to="/projects" className="nav-link">PROJECTS</Link>
         </li>
         <li className="nav-item me-2">
-          <Link to="/contact" className="nav-link">CONTACT</Link>
+          <Link to={{pathname:"/", hash:"contact-section"}} onClick={handleContactClick} className="nav-link">CONTACT</Link>
         </li>
         <li className="nav-item">
           <ModeIcon />
@@ -59,7 +68,7 @@ function Nav() {
               <Link to="/projects" className="nav-link">PROJECTS</Link>
             </li>
             <li className="dropdown-item nav-item me-2">
-              <Link to="/contact" className="nav-link">CONTACT</Link>
+              <Link to={{pathname:"/", hash:"#contact-section"}} className="nav-link">CONTACT</Link>
             </li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 @media screen and (max-width: 767px) {
   .arrows {
     bottom: 2rem !important;
-    .prev-page, .next-page {
+    .down-section, .prev-page, .next-page {
       a {
         font-size: 16px !important;
         i {
@@ -14,12 +14,46 @@
     }
   }
 }
-  
+
 .arrows {
   position: absolute;
   bottom: 4%;
   left: 5%;
   right: 5%;
+  .down-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.75rem;
+    .continue {
+      position: absolute;
+      bottom: 5%;
+      animation: bounce-down 1500ms infinite;
+      animation-timing-function: cubic-bezier(.31,.52,.64,.68);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      i {
+        font-size: 30px;
+        margin-top: -10px;
+      }
+    }
+    .stop-bar {
+      position: absolute;
+      margin: 0;
+      bottom: 3%;
+      border-width: 5px;
+      border-radius: 0.5rem;
+      height: 2px;
+      width: 18px;
+      opacity: 100%;
+    }
+  }
+  .down-section {
+    a {
+      animation-timing-function: cubic-bezier(.31,.52,.64,.68);
+    }
+  }  
   .prev-page, .next-page {
     a {
       background-color: transparent;
@@ -35,6 +69,8 @@
         margin-right: 5px;
       }
     }
+  }
+  .prev-page, .next-page {
     .stop-bar {
       // position: absolute;
       // bottom: 8%;

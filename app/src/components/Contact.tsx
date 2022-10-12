@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "../styles/contact.scss";
-import PrevPage from './PrevPage';
+import NextPage from './NextPage';
  
 function Contact() {
+  const hash = window.location.hash;
+  const contactRef = useRef(null);
+  
+  useEffect( () => {
+    if (hash === "#contact-section") {
+      contactRef.current.scrollIntoView({behavior: "auto"});
+    }
+  }, [hash]);
+
   interface FormPost {
     firstname?: string,
     lastname?: string,
@@ -30,7 +39,7 @@ function Contact() {
     event.preventDefault();
   }
   
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>) => {
     console.log(state);
     setState({
       ...state,
@@ -39,7 +48,7 @@ function Contact() {
   };
 
   return (
-    <div id="contact" className="py-5 px-3 px-md-5">
+    <div ref={contactRef} id="contact-section" className="py-5 px-3 px-md-5">
       <h1 className="mb-3 mt-5 my-sm-5">
         CONTACT ME
       </h1>
@@ -87,8 +96,8 @@ function Contact() {
           </form>
         </div>
       </div>
-      <div className="arrows d-flex justify-content-between align-items-center mt-3">
-        <PrevPage {...{name:"TO PROJECTS"}} />
+      <div className="arrows d-flex justify-content-end align-items-center mt-3">
+        <NextPage {...{name:"TO PROJECTS"}} />
       </div>
     </div>
   );

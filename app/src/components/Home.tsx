@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile from './Profile';
 import "../styles/home.scss";
+import Contact from './Contact';
  
 function Home() {
 
@@ -27,14 +28,20 @@ function Home() {
             <i className="bi bi-file-earmark-person" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Resume" />
           </a>
         </div>
-        <a className="continue d-flex flex-column align-items-center" href="#profile">
-          START
-          <i className="fa-solid fa-caret-down"></i>
-        </a>
-        <hr className="stop-bar"></hr>
+        <div className="arrows">
+          <div className="down-section d-flex flex-column align-items-center">
+            <a className="continue d-flex flex-column align-items-center" href="#profile">
+              START
+              <i className="fa-solid fa-caret-down"></i>
+            </a>
+            <hr className="stop-bar"></hr>
+          </div>
+        </div>
       </div>
   
       <Profile />
+      <Contact />
+    
       
     </div>
   )
