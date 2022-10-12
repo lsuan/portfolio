@@ -30,7 +30,7 @@ function Contact() {
     event.preventDefault();
   }
   
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const handleChange = (e: any) => {
     console.log(state);
     setState({
       ...state,
