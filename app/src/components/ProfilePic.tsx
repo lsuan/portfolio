@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
 import '../styles/profile-pic.scss';
 import Stats from './Stats';
 
@@ -25,13 +26,16 @@ function ProfilePic() {
 
   }
 
+  const currentTheme = useContext(ThemeContext);
+  console.log(currentTheme);
   useEffect( () => {
     calculateExp();
-  });
+  }, []);
+  
 
   return (
     <div className="info d-flex align-items-center col-3 me-5">
-      <div className="pfp-container mb-3">
+      <div className="pfp-container mb-5 mb-md-3">
         <div className="img-container d-flex justify-content-center align-items-center mx-auto">
           <div className="level">
             <p ref={levelRef} className="levelValue" />
@@ -39,10 +43,20 @@ function ProfilePic() {
           <div className="exp-container">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
               <defs>
-                <linearGradient id="gradient-color">
-                  <stop offset="0%" stopColor="#DFD9CA" />
-                  <stop offset="100%" stopColor="#FCB9B4" />
-                </linearGradient>
+                {
+                  (currentTheme.theme === "dark-content") ? (
+                    <linearGradient id="gradient-color">
+                      <stop offset="0%" stopColor="#DFD9CA" />
+                      <stop offset="100%" stopColor="#FCB9B4" />
+                    </linearGradient>
+                  ) : (
+                    <linearGradient id="gradient-color">
+                      <stop offset="0%" stopColor="#234f1e" />
+                      <stop offset="100%" stopColor="#f5347f" />
+                    </linearGradient>
+                  )
+
+                }
               </defs>
               <circle ref={expCircleRef} cx="110" cy="110" r="105" strokeLinecap="round" />
             </svg>

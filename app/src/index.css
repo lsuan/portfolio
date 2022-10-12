@@ -22,11 +22,11 @@ code {
   --dark-mode-card-background: #333333;
   --dark-mode-font-color: #FFFAF1;
 
-  --light-mode-beige: #8C573A;
-  --light-mode-pink: #CE6A85;
-  --light-mode-green: #606C38;
-  --light-mode-background: #F9F7F0;
-  --light-mode-card-background:#FBFAF6;
+  --light-mode-beige: #483c32;
+  --light-mode-pink: #f5347f;
+  --light-mode-green: #234f1e;
+  --light-mode-background: #eeeeee;
+  --light-mode-card-background: #ffffff;
   --light-mode-font-color: #222222;
 }
 
