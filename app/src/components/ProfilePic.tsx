@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { ThemeContext } from '../Contexts/ThemeContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 import '../styles/profile-pic.scss';
 import Stats from './Stats';
 

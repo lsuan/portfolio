@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeContext, themes } from '../Contexts/ThemeContext';
+import { ThemeContext, themes } from '../contexts/ThemeContext';
  
 export default function ThemeContextWrapper(props: any) {
   const [theme, setTheme] = useState(themes.dark);
