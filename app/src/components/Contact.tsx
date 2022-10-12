@@ -33,7 +33,7 @@ function Contact() {
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setState({
       ...state,
-      [e.currentTarget.id]: e.currentTarget.value,
+      [e.currentTarget.name]: e.currentTarget.value,
     });
   };
 
