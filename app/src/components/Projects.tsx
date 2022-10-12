@@ -8,7 +8,7 @@ function Projects() {
   const projects = [
     {
       id: "givsum", title: "GIVSUM, INC.", type: "professional", liveLink: "https://www.givsum.com/", githubLink: "",
-      imageUrl: require("../assets/givsum-thumbnail.png"),
+      imageUrl: "../assets/givsum-thumbnail.png",
       position: "Full Stack Software Engineer", time: "Sep 2019 — Aug 2022",
       description: "Givsum is a startup that handles organizations and charity events. I worked as a full stack developer, but delved more on front end redesigns. \
         Improving and modernizing the website's look and implementing better UI/UX by bringing designs to life were vital tasks of the job. \
@@ -17,7 +17,7 @@ function Projects() {
     },
     {
       id: "this", title: "THIS WEBSITE", type: "personal", liveLink: "", githubLink: "https://github.com/lsuan/my-website",
-      imageUrl: require("../assets/website-thumbnail.png"),
+      imageUrl: "../assets/website-thumbnail.png",
       position: "", time: "Oct 2022 — Present",
       description: "This was my first attempt of incorporating TypeScript into a web project, learning more about its syntax and usage. Furthermore, I dug deeper into my creative side and implemented a clean UI while keeping the site accessible and easy-to-use. \
         I also explored more React components such as Contexts for dark/light mode implementation and CSS Animations for extra pizzazz.",
@@ -25,7 +25,7 @@ function Projects() {
     },
     {
       id: "hagglit", title: "HAGGLIT", type: "personal", liveLink: "", githubLink: "https://github.com/lsuan/hagglit",
-      imageUrl: require("../assets/hagglit-thumbnail.png"),
+      imageUrl: "../assets/hagglit-thumbnail.png",
       position: "", time: "Sep 2022 — Present",
       description: "This is a private Discord bot that I made for my server of close KPOP fandom friends. I had to learn how to create a Discord application and use Discord API to create custom commands. \
         Furthermore, I used Google Sheets API to store and manipulate information to a Google Sheet that acted like a relational database, and Twitter API to return tweet metrics.",

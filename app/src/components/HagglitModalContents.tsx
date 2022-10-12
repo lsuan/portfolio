@@ -36,7 +36,7 @@ function HagglitModalContents() {
           <span className="visually-hidden">Next</span>
         </button>
         <div className="carousel-item d-flex align-items-center active">
-          <img src={require("../assets/hagglit-contents/all-commands.png")} alt="All Commands" loading="lazy"/>
+          <img src={"../assets/hagglit-contents/all-commands.png"} alt="All Commands" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               ALL COMMANDS
@@ -52,7 +52,7 @@ function HagglitModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/hagglit-contents/greeting-collection.png")} alt="Greeting and Collection Commands" loading="lazy"/>
+          <img src={"../assets/hagglit-contents/greeting-collection.png"} alt="Greeting and Collection Commands" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               GREETING + COLLECTION COMMANDS
@@ -64,7 +64,7 @@ function HagglitModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/hagglit-contents/projects.png")} alt="Project Commands" loading="lazy"/>
+          <img src={"../assets/hagglit-contents/projects.png"} alt="Project Commands" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               PROJECT COMMANDS
@@ -75,7 +75,7 @@ function HagglitModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/hagglit-contents/twitter-api.png")} alt="Implementing Twitter API" loading="lazy"/>
+          <img src={"../assets/hagglit-contents/twitter-api.png"} alt="Implementing Twitter API" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               USING TWITTER API TO GET TWEET DATA
@@ -86,7 +86,7 @@ function HagglitModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/hagglit-contents/fun-commands.png")} alt="Miscellaneous Commands" loading="lazy"/>
+          <img src={"../assets/hagglit-contents/fun-commands.png"} alt="Miscellaneous Commands" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               MISCELLANEOUS FUN COMMANDS
@@ -98,7 +98,7 @@ function HagglitModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/hagglit-contents/error-handling.png")} alt="Error Handling" loading="lazy"/>
+          <img src={"../assets/hagglit-contents/error-handling.png"} alt="Error Handling" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               ERROR HANDLING

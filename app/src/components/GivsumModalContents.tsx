@@ -24,7 +24,7 @@ function GivsumModalContents() {
           <span className="visually-hidden">Next</span>
         </button>
         <div className="carousel-item active">
-          <img src={require("../assets/givsum-contents/landing-page.gif")} alt="Landing Page" loading="lazy" />
+          <img src={"../assets/givsum-contents/landing-page.gif"} alt="Landing Page" loading="lazy" />
           <div className="carousel-caption">
             <div className="content-title">
               LANDING PAGE
@@ -41,7 +41,7 @@ function GivsumModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/givsum-contents/about-us.gif")} alt="About Us" loading="lazy" />
+          <img src={"../assets/givsum-contents/about-us.gif"} alt="About Us" loading="lazy" />
           <div className="carousel-caption">
             <div className="content-title">
               ABOUT US
@@ -49,7 +49,7 @@ function GivsumModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/givsum-contents/pricing.gif")} alt="Pricing" loading="lazy" />
+          <img src={"../assets/givsum-contents/pricing.gif"} alt="Pricing" loading="lazy" />
           <div className="carousel-caption">
             <div className="content-title">
               PRICING
@@ -57,7 +57,7 @@ function GivsumModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/givsum-contents/clubs-nonprofits.gif")} alt="Clubs and Nonprofits" loading="lazy" />
+          <img src={"../assets/givsum-contents/clubs-nonprofits.gif"} alt="Clubs and Nonprofits" loading="lazy" />
           <div className="carousel-caption">
             <div className="content-title">
               CLUBS &#38; NONPROFITS
@@ -65,7 +65,7 @@ function GivsumModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/givsum-contents/donors-volunteers.gif")} alt="Donors and Volunteers" loading="lazy" />
+          <img src={"../assets/givsum-contents/donors-volunteers.gif"} alt="Donors and Volunteers" loading="lazy" />
           <div className="carousel-caption">
             <div className="content-title">
               DONORS &#38; VOLUNTEERS
@@ -73,7 +73,7 @@ function GivsumModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/givsum-contents/working-with-customers.gif")} alt="Working with Customer Requests" loading="lazy"/>
+          <img src={"../assets/givsum-contents/working-with-customers.gif"} alt="Working with Customer Requests" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               WORKING WITH CUSTOMER REQUESTS
@@ -86,7 +86,7 @@ function GivsumModalContents() {
           </div>
         </div>
         <div className="carousel-item">
-          <img src={require("../assets/givsum-contents/user-settings.gif")} alt="User Settings" loading="lazy"/>
+          <img src={"../assets/givsum-contents/user-settings.gif"} alt="User Settings" loading="lazy"/>
           <div className="carousel-caption">
             <div className="content-title">
               USER SETTINGS
