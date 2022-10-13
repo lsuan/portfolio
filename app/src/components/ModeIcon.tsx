@@ -16,6 +16,7 @@ function ModeIcon() {
       {({ changeTheme }) => (
         <button
           type="button"
+          className="p-0"
           onClick= {() => {
             setDarkMode(!darkMode);
             changeTheme(darkMode ? themes.light : themes.dark);
