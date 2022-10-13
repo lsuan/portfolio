@@ -76,29 +76,6 @@
       }
     }
   }
-  
-  .continue {
-    position: absolute;
-    bottom: 5%;
-    animation: bounce-down 1500ms infinite;
-    animation-timing-function: cubic-bezier(.31,.52,.64,.68);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    i {
-      font-size: 30px;
-      margin-top: -10px;
-    }
-  }
-  .stop-bar {
-    position: absolute;
-    bottom: 3%;
-    border-width: 5px;
-    border-radius: 0.5rem;
-    height: 2px;
-    width: 18px;
-    opacity: 100%;
-  }
 }
   
  
