@@ -30,7 +30,7 @@ function Nav() {
   }
   
   return (
-    <ul className="fixed-top container-xxl nav nav-expand-lg d-flex justify-content-between align-items-center py-2 px-4" id="nav">
+    <ul className="fixed-top container-xxl nav nav-expand-lg d-flex justify-content-between align-items-center py-2 px-4 w-100" id="nav">
       <Link to="/" onClick={handleHomeClick} className="logo-container">
         <img className="logo" alt=""/>
       </Link>
@@ -51,7 +51,7 @@ function Nav() {
           <ModeIcon />
         </li>
       </div>
-      <div className="action-icons d-flex d-md-none">
+      <div className="action-icons d-flex justify-content-end d-md-none w-50">
         <li className="nav-item">
           <ModeIcon />
         </li>
