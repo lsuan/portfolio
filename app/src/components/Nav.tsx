@@ -68,7 +68,7 @@ function Nav() {
               <Link to="/projects" className="nav-link">PROJECTS</Link>
             </li>
             <li className="dropdown-item nav-item me-2">
-              <Link to={{pathname:"/", hash:"#contact-section"}} className="nav-link">CONTACT</Link>
+              <Link to={{pathname:"/", hash:"#contact-section"}} onClick={handleContactClick} className="nav-link">CONTACT</Link>
             </li>
           </ul>
         </div>
