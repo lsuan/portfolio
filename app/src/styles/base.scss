@@ -344,8 +344,8 @@
       }
     }
   }
-  #success {
-    h1 {
+  .success {
+    .content-title {
       i {
         color: var(--light-mode-green);
       }
