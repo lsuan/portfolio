@@ -714,8 +714,8 @@
     text-transform: uppercase;
     letter-spacing: 0.15rem;
   }
-  #success {
-    h1 {
+  .success {
+    .content-title {
       i {
         color: var(--dark-mode-green);
       }

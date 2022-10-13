@@ -60,7 +60,7 @@ function Profile() {
         </div>
         <div className="next-page d-flex justify-content-end align-items-center mt-3">
           <Link to="/projects" className="btn d-flex justify-content-end align-items-center">
-            TO PROJECTS
+            PROJECTS
             <i className="ms-1 fa-solid fa-caret-right"></i>
           </Link>
           <hr className="stop-bar"></hr>

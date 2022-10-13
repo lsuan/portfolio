@@ -19,6 +19,7 @@ function Contact() {
   }
 
   const [state, setState] = useState<FormPost>();
+  const [submitted, setSubmitted] = useState(false);
 
   const encode = (data: any) => {
     return Object.keys(data)
@@ -27,8 +28,6 @@ function Contact() {
   }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    console.log(event.target);
-    console.log(encode({ "form-name": "contact", ...state }));
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -36,11 +35,11 @@ function Contact() {
     })
       .then(() => console.log("Success!"))
       .catch(error => console.log(error));
+    setSubmitted(true);
     event.preventDefault();
   }
   
   const handleChange = (e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>) => {
-    console.log(state);
     setState({
       ...state,
       [e.currentTarget.name]: e.currentTarget.value,
@@ -66,7 +65,7 @@ function Contact() {
           <div className="or-text pt-4">
             OR
           </div>
-          <div className="form-ref d-flex justify-content-center md-justify-content-evenly align-items-center">
+          <div className="form-ref d-flex justify-content-center md-justify-content-evenly align-items-center mb-3">
             <div className="pe-3">
               FILL OUT THIS FORM!
             </div>
@@ -75,29 +74,46 @@ function Contact() {
           </div>
         </div>
         <div className="contact-form p-3 card col-12 col-md-6">
-          <form id="contact-form" name="contact" className="d-flex d-flex flex-column justify-content-between" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
-            <input name="bot-field" className="d-none" />
-            <input type="hidden" name="form-name" value="contact" />
-            <div className="inputs">
-              <div className="form-floating mb-3">
-                <input type="text" name="name" className="form-control" id="name" placeholder="First Last" required={true} onChange={handleChange}/>
-                <label htmlFor="name">NAME</label>
-            </div>
-              <div className="form-floating mb-3">
-                <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required={true} onChange={handleChange}/>
-                <label htmlFor="email">EMAIL</label>
+          {
+            (!submitted) && (
+              <form id="contact-form" name="contact" className="d-flex d-flex flex-column justify-content-between" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+                <input name="bot-field" className="d-none" />
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="inputs">
+                  <div className="form-floating mb-3">
+                    <input type="text" name="name" className="form-control" id="name" placeholder="First Last" required={true} onChange={handleChange}/>
+                    <label htmlFor="name">NAME</label>
+                </div>
+                  <div className="form-floating mb-3">
+                    <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required={true} onChange={handleChange}/>
+                    <label htmlFor="email">EMAIL</label>
+                  </div>
+                  <div className="form-floating mb-2">
+                    <textarea id="message" name="message" className="form-control w-100" placeholder="Leave a message." required={true} onChange={handleChange}/>
+                    <label htmlFor="message">MESSAGE</label>
+                  </div>
+                </div>
+                <button type="submit" className="btn">SEND</button>
+              </form>
+            )
+          }
+          {
+            (submitted) && (
+              <div className="success d-flex flex-column justify-content-center align-items-center p-3 p-md-2 pt-0 mx-auto h-100">
+                <div className="content-title mb-3">
+                  SENT!
+                  <i className="bi bi-check-circle-fill ms-2" />
+                </div>
+                <div className="description">
+                  Thank you for contacting me! I'll get back to you as soon as I can. Have a matcha latte in the meantime 🍵
+                </div>
               </div>
-              <div className="form-floating mb-2">
-                <textarea id="message" name="message" className="form-control w-100" placeholder="Leave a message." required={true} onChange={handleChange}/>
-                <label htmlFor="message">MESSAGE</label>
-              </div>
-            </div>
-            <button type="submit" className="btn">SEND</button>
-          </form>
+            )
+          }
         </div>
       </div>
       <div className="arrows d-flex justify-content-end align-items-center mt-3">
-        <NextPage {...{name:"TO PROJECTS"}} />
+        <NextPage {...{name:"PROJECTS"}} />
       </div>
     </div>
   );

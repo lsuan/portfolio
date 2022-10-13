@@ -34,7 +34,8 @@ code {
 
 h1 {
   font-size: 40px;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {

@@ -32,8 +32,8 @@ function ProfilePic() {
   
 
   return (
-    <div className="info d-flex align-items-center col-3 me-5">
-      <div className="pfp-container mb-5 mb-md-3">
+    <div className="info d-flex align-items-center col-12 col-md-3 m-0 me-md-5">
+      <div className="pfp-container my-5 mb-md-3">
         <div className="img-container d-flex justify-content-center align-items-center mx-auto">
           <div className="level">
             <p ref={levelRef} className="levelValue" />
