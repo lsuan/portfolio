@@ -24,7 +24,7 @@ function Home() {
           <a href="https://www.linkedin.com/in/lsuan/" rel="noreferrer" target="_blank">
             <i className="bi bi-linkedin" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="LinkedIn" />
           </a>
-          <a href="https://drive.google.com/file/d/1cWqWDWl9WbQs4rp90G5rITvhXDKgTUPc/view?usp=sharing" rel="noreferrer"  target="_blank">
+          <a href="https://drive.google.com/file/d/1lSlMou6wWLjGMZA_unoqNtAuCKFB5Ka7/view?usp=sharing" rel="noreferrer"  target="_blank">
             <i className="bi bi-file-earmark-person" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title="Resume" />
           </a>
         </div>
