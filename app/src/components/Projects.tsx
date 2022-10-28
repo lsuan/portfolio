@@ -3,7 +3,7 @@ import "../styles/projects.scss";
 // import NextPage from './NextPage';
 import PrevPage from './PrevPage';
 import ProjectModal from './ProjectModal';
- 
+
 function Projects() {
   const projects = [
     {
@@ -12,6 +12,13 @@ function Projects() {
       position: "Full Stack Software Engineer", time: "Sep 2019 — Aug 2022",
       description: "Givsum is a startup that handles organizations and charity events. I worked as a full stack developer, but delved more on front end redesigns. Improving and modernizing the website's look and implementing better UI/UX by bringing designs to life were vital tasks of the job. In addition, I also changed functionality on the backend and added data migrations to the database.",
       tech: ["Ruby on Rails", "HTML", "JavaScript", "JQuery", "CSS", "Bootstrap", "PostgreSQL"],
+    },
+    {
+      id: "tic-tac-toe", title: "TIC TAC TOE (TO1)", type: "personal", liveLink: "https://tictac-to1.netlify.app/", githubLink: "https://github.com/lsuan/tic-tac-toe",
+      imageUrl: require("../assets/tic-tac-toe-thumbnail.png"),
+      position: "", time: "October 2022 — October 2022",
+      description: "This is a recreation of the classic game Tic Tac Toe. Instead of using X's and O's, it uses character images on the board, which comes from the members of the Kpop group TO1. It replicates a simple game structure with a start screen, character select screen, game screen, and results screen with options to play again or quit.", 
+      tech: ["React", "TypeScript", "TailwindCSS"]
     },
     {
       id: "this", title: "THIS WEBSITE", type: "personal", liveLink: "", githubLink: "https://github.com/lsuan/my-website",
@@ -38,7 +45,7 @@ function Projects() {
         <div className="projects-container d-flex flex-column align-items-center mx-auto my-md-3">
           {
             projects.map( (project, index) =>
-              <div key={project.title} className="project w-100 mt-3 mt-md-4">
+              <div key={project.title} className="project w-100 mt-3 mt-md-5">
                 <ProjectModal {...project} />
                 <div className={`project-content d-flex flex-column flex-md-row align-items-stretch justify-content-center ${index % 2 === 0 ? "flex-md-row-reverse" : "flex-md-row"}`}>
                   <div className="project-media mx-md-4 mx-lg-5 my-5 my-md-0">
@@ -47,23 +54,22 @@ function Projects() {
                       <div className={`project-type ${index % 2 === 0 ? "left" : "right"}`}>
                         {project.type}
                       </div>
-                      {
-                        (project.id === "givsum") ? (
-                          <div className={`project-links ${index % 2 === 0 ? "left" : "right"}`}>
+                      <div className={`project-links d-flex justify-content-center gap-2 ${index % 2 === 0 ? "left" : "right"}`}>
+                        {
+                          (project.liveLink !== "") && 
                             <a href={project.liveLink} className="btn d-flex justify-content-center align-content-center" rel="noreferrer" target="_blank">
                               <i className="bi bi-arrow-up-right-square-fill me-1" />
                               LIVE
                             </a>
-                          </div>
-                        ) : (
-                          <div className={`project-links ${index % 2 === 0 ? "left" : "right"}`}>
+                        }
+                        {
+                          (project.githubLink !== "") && 
                             <a href={project.githubLink} className="btn d-flex justify-content-center align-content-center" rel="noreferrer" target="_blank">
                               <i className="bi bi-github me-1" />
                               REPO
                             </a>
-                          </div>
-                        )
-                      }
+                        }
+                      </div>
                       </div>
                       <div className="project-tech pt-4 mt-md-4">
                         <div className="tech-title w-100">
@@ -76,8 +82,7 @@ function Projects() {
                                 <div key={name} className="tag px-2" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-title={name} >
                                   {name}
                                 </div>
-                              )
-  
+                              );
                             })
                           }
                         </div>
@@ -134,7 +139,5 @@ function Projects() {
     </div>
   );
 }
- 
-export default Projects;
- 
 
+export default Projects;

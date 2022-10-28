@@ -1,7 +1,8 @@
 import React from "react";
 import GivsumModalContents from "./GivsumModalContents";
 import HagglitModalContents from "./HagglitModalContents";
- 
+import TicTacToeModalContents from "./TicTacToeModalContents";
+
 interface Project {
   id: string,
   title: string,
@@ -12,12 +13,12 @@ interface Project {
   description: string,
   tech: string[],
 }
- 
- 
+
 function ProjectModal(project: Project) {
   const contents: Map<string, JSX.Element> = new Map([
     ["givsum", <GivsumModalContents />],
-    ["hagglit", <HagglitModalContents />]
+    ["hagglit", <HagglitModalContents />],
+    ["tic-tac-toe", <TicTacToeModalContents />],
   ]);
   
   return (
@@ -37,23 +38,11 @@ function ProjectModal(project: Project) {
               contents.get(project.id)
             }
           </div>
-          {/* <button className="carousel-control-prev w-auto" type="button" data-bs-target={`#${project.id}Carousel`} data-bs-slide="prev">
-            <span className="carousel-control-prev-icon fa-solid fa-angle-left" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next w-auto" type="button" data-bs-target={`#${project.id}Carousel`} data-bs-slide="next">
-            <span className="carousel-control-next-icon fa-solid fa-angle-right" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button> */}
-          {/* <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" className="btn btn-primary">Save changes</button>
-          </div> */}
         </div>
       </div>
     </div>
   );
 }
- 
+
 export default ProjectModal;
 
