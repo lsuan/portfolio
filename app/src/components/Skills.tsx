@@ -1,53 +1,84 @@
-import React from 'react'; 
- 
+import React from "react";
+
 // type Skill = {
 //   name: string,
 //   icon: string,
 //   value: number
 // }
- 
+
 function Skills() {
- 
   const handleStrokeDashoffset = (value: number) => {
     const percentage = value / 100;
     const offsetValue = Math.round(578 * percentage);
     return 578 - offsetValue;
-  }
-  
+  };
+
   const skills = [
-    {skill: "HTML", icon: "fa-brands fa-html5", value: 100, strokeDashoffset: 0},
-    {skill: "CSS", icon: "fa-brands fa-css3-alt", value: 100, strokeDashoffset: 0},
-    {skill: "Sass", icon: "fa-brands fa-sass", value: 100, strokeDashoffset: 0},
-    {skill: "Python", icon: "fa-brands fa-python", value: 100, strokeDashoffset: 0},
-    {skill: "Git", icon: "bi bi-git", value: 100, strokeDashoffset: 0},
-    {skill: "Bootstrap", icon: "bi bi-bootstrap-fill", value: 95, strokeDashoffset: handleStrokeDashoffset(95)},
-    {skill: "JavaScript", icon: "fa-brands fa-square-js", value: 95, strokeDashoffset: handleStrokeDashoffset(95)},
-    {skill: "Rails", icon: "bi bi-filetype-rb", value: 90, strokeDashoffset: handleStrokeDashoffset(90)},
-    {skill: "React", icon: "fa-brands fa-react", value: 80, strokeDashoffset: handleStrokeDashoffset(80)},
+    {
+      skill: "HTML",
+      icon: "fa-brands fa-html5",
+      value: 100,
+      strokeDashoffset: 0,
+    },
+    {
+      skill: "CSS",
+      icon: "fa-brands fa-css3-alt",
+      value: 100,
+      strokeDashoffset: 0,
+    },
+    {
+      skill: "Sass",
+      icon: "fa-brands fa-sass",
+      value: 100,
+      strokeDashoffset: 0,
+    },
+    {
+      skill: "JavaScript",
+      icon: "fa-brands fa-square-js",
+      value: 95,
+      strokeDashoffset: handleStrokeDashoffset(95),
+    },
+    {
+      skill: "TypeScript",
+      icon: "bi bi-filetype-tsx",
+    },
+    {
+      skill: "React",
+      icon: "fa-brands fa-react",
+      value: 80,
+      strokeDashoffset: handleStrokeDashoffset(80),
+    },
+    {
+      skill: "Rails",
+      icon: "bi bi-filetype-rb",
+      value: 90,
+      strokeDashoffset: handleStrokeDashoffset(90),
+    },
+    {
+      skill: "Python",
+      icon: "fa-brands fa-python",
+      value: 100,
+      strokeDashoffset: 0,
+    },
+    { skill: "Git", icon: "bi bi-git", value: 100, strokeDashoffset: 0 },
   ];
-  
+
   return (
     <div id="skills" className="p-4 p-md-3 h-100">
-      <div className="title">
-        STACK
-      </div>
-      {
-        skills.map( (skill) =>
-          <div key={`${skill.skill.toLowerCase()}`} className="skill d-flex flex-column justify-content-center align-items-center py-2">
-            {
-              (skill.icon === "") ? (
-                <i className="skill-icon d-flex mb-1">
-                </i>
-              ) : (
-                <i className={`skill-icon ${skill.icon} mb-1`} />
-              )
-            }
-            <div className="skill-name text-center">
-              {skill.skill}
-            </div>
-          </div>
-        )
-      }
+      <div className="title">STACK</div>
+      {skills.map((skill) => (
+        <div
+          key={`${skill.skill.toLowerCase()}`}
+          className="skill d-flex flex-column justify-content-center align-items-center py-2"
+        >
+          {skill.icon === "" ? (
+            <i className="skill-icon d-flex mb-1"></i>
+          ) : (
+            <i className={`skill-icon ${skill.icon} mb-1`} />
+          )}
+          <div className="skill-name text-center">{skill.skill}</div>
+        </div>
+      ))}
       {/* {
         skills.map( (skill) =>
           <div key={`${skill.skill.toLowerCase()}`} className="skill p-3 d-flex justify-content-center">
@@ -100,8 +131,6 @@ function Skills() {
       } */}
     </div>
   );
- 
 }
- 
-export default Skills;
 
+export default Skills;
